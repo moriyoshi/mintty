@@ -455,10 +455,10 @@ win_key_down(WPARAM wp, LPARAM lp)
   if (!term.shortcut_override) {
 
     // Copy&paste
-    if (cfg.clip_shortcuts && key == VK_INSERT && mods && !alt) {
-      if (ctrl)
+    if (cfg.clip_shortcuts && ctrl && shift && !alt) {
+      if (key == 'C')
         term_copy();
-      if (shift)
+      else if (key == 'V')
         win_paste();
       return 1;
     }

@@ -1660,7 +1660,7 @@ setup_config_box(controlbox * b)
 
   s = ctrl_new_set(b, "Keys", "Shortcuts");
   ctrl_checkbox(
-    s, "Cop&y and Paste (Ctrl/Shift+Ins)",
+    s, "Cop&y and Paste (Ctrl+Shift+C/V)",
     dlg_stdcheckbox_handler, &new_cfg.clip_shortcuts
   );
   ctrl_checkbox(
